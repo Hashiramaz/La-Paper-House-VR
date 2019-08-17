@@ -27,7 +27,7 @@ public class ScalingObject : MonoBehaviour
     }
 
 
-    public void ScaleScenaryUp(){
+    public void ScaleScenaryUp() {
         
     }
 }
