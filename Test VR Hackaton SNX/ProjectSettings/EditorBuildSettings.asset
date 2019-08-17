@@ -26,7 +26,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/VRTK/Examples/[007 - Interactions] InteractionHelpers.unity
     guid: ea2236e506afcac41a7b82e176d839d1
-  - enabled: 1
+  - enabled: 0
     path: Assets/PulseSceneTest.unity
     guid: 05e79c5d5d655f04ea265d313702b1f5
+  - enabled: 1
+    path: Assets/Scenes/DesertScene.unity
+    guid: 166833c9d7eb880498c724c28470b3d1
   m_configObjects: {}
