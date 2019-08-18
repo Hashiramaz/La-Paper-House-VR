@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerInteractionManager))]
+[RequireComponent(typeof(ui_virandola))]
 public class PlayerInputs : MonoBehaviour
 {
     public bool buttonShootPressed;
@@ -19,14 +20,25 @@ public class PlayerInputs : MonoBehaviour
         }
 
     }    public PlayerInteractionManager m_playerinteraction;
+
+    public ui_virandola virandola{
+        get{
+            if(m_virandola == null)
+                m_virandola = GetComponent<ui_virandola>();
+            return m_virandola;
+        }
+    }
+    public ui_virandola m_virandola;
+    
+    
     private void Update() {
         UpdateInputs();
     }    
     
     public void UpdateInputs(){
 
-        
-        buttonShootPressed = Input.GetButton("Fire1");
+        buttonShootPressed = (virandola.virandola > 0 );         
+       //buttonShootPressed = Input.GetButton("Fire1");
 
         if(buttonShootPressed && !buttonShootActive){
             buttonShootActive = true;

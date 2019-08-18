@@ -12,6 +12,7 @@ public class ScalingObject : MonoBehaviour
     public Vector3 scaleDefault;
 
     public bool buttonScale;
+    public bool buttonPressed;
 
     //public bool 
     // Start is called before the first frame update
@@ -23,18 +24,21 @@ public class ScalingObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // UpdateVariable();
-            buttonScale = Input.GetButton("Jump");
+        //UpdateVariable();
+           // buttonScale = Input.GetButton("Jump");
 
-
-
-        if(Input.GetButtonDown("Jump")){
+        if(buttonScale && !buttonPressed){
+            buttonPressed = true;
             ScaleScenaryUp();
+
         }
 
-        if(Input.GetButtonUp("Jump")){
+        if(!buttonScale && buttonPressed){
+            buttonPressed = false;
             ScaleNormal();
+
         }
+
     }
 
     public void UpdateVariable(){

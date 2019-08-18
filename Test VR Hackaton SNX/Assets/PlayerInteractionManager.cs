@@ -7,6 +7,17 @@ public class PlayerInteractionManager : MonoBehaviour
     public Transform initialLinecast;
     public Transform finalLinecast;
 
+    public PlayerInputs playerInputs{
+        get{
+            if(m_playerInputs == null)
+                m_playerInputs = GetComponent<PlayerInputs>();
+            return m_playerInputs;
+        }
+    }
+    protected PlayerInputs m_playerInputs;
+    
+    //public ScalingObject scalingManager;
+    
     public         RaycastHit _out; 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +29,13 @@ public class PlayerInteractionManager : MonoBehaviour
     void Update()
     {
      UpdateLinecast();   
+        UpdateRespiration();
     }
 
+public void UpdateRespiration(){
+    //scalingManager.buttonScale = playerInputs.virandola.virandola > 0;
+   // scalingManager.buttonScale = Input.GetButton("Fire1");
+}
     public void UpdateLinecast(){
 
 

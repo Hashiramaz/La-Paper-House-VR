@@ -7,6 +7,7 @@ TagManager:
   - ExcludeTeleport
   - Dandelion
   - Wind
+  - Enviroment
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2504611818355602136}
   - component: {fileID: 2504611818355602137}
   - component: {fileID: 2504611818355602140}
+  - component: {fileID: 3605864783841155917}
   m_Layer: 0
   m_Name: WindBullets
   m_TagString: Wind
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2504611818355602138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.31280836, y: 3.8235178, z: 3.4539075}
-  m_LocalScale: {x: 0.40366, y: 0.40366, z: 0.40366}
+  m_LocalScale: {x: 0.50889415, y: 0.50889415, z: 0.50889415}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -122,4 +123,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rb: {fileID: 0}
-  speed: 10
+  speed: 15
+--- !u!114 &3605864783841155917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2504611818355602138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b5b098aa5dc0a4480060cc08984fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsToDestroy: 5

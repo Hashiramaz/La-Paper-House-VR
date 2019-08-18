@@ -7,7 +7,7 @@ public class PlayerWindWeapon : MonoBehaviour
     public PlayerInputs playerInputs;
     public GameObject bulletPrefab;
 
-    public Transform bulletpoint;
+    public Transform[] bulletpoints;
 
     public float firingRate;
 
@@ -28,8 +28,11 @@ public class PlayerWindWeapon : MonoBehaviour
 
     public void Shoot(){
 //        Debug.Log("Atirando");
-
-        Instantiate(bulletPrefab,bulletpoint.position,bulletpoint.rotation);
+        for (int i = 0; i < bulletpoints.Length; i++)
+        {
+            
+        Instantiate(bulletPrefab,bulletpoints[i].position,bulletpoints[i].rotation);
+        }
 
         nextTimeToFire = Time.time + firingRate;
 
