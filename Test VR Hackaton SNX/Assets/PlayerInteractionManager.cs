@@ -33,15 +33,21 @@ public class PlayerInteractionManager : MonoBehaviour
     }
 
 public void UpdateRespiration(){
-    //scalingManager.buttonScale = playerInputs.virandola.virandola > 0;
+   // scalingManager.buttonScale = playerInputs.virandola.virandola > 0;
    // scalingManager.buttonScale = Input.GetButton("Fire1");
 }
+
     public void UpdateLinecast(){
 
 
           Physics.Linecast(initialLinecast.position,finalLinecast.position,out _out);
-
-          //if(_out.collider)
+        
+        if(_out.collider)
+          if(_out.collider.isTrigger)
+                if(_out.collider.gameObject.CompareTag("House")){
+                    //aqui resetar posição da house
+                    _out.collider.gameObject.GetComponentInChildren<HouseScript>().Respawn();
+                }
            // Debug.Log("Estamos tocando no objecto " + _out.collider);
 
     }

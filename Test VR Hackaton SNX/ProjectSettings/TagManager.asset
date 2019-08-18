@@ -8,6 +8,7 @@ TagManager:
   - Dandelion
   - Wind
   - Enviroment
+  - House
   layers:
   - Default
   - TransparentFX
