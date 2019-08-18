@@ -25,8 +25,8 @@ public class PlayerInteractionManager : MonoBehaviour
 
           Physics.Linecast(initialLinecast.position,finalLinecast.position,out _out);
 
-          if(_out.collider)
-            Debug.Log("Estamos tocando no objecto " + _out.collider);
+          //if(_out.collider)
+           // Debug.Log("Estamos tocando no objecto " + _out.collider);
 
     }
 

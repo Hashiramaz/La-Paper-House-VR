@@ -2,12 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerInteractionManager))]
 public class PlayerInputs : MonoBehaviour
 {
-    public bool buttonPressed;
+    public bool buttonShootPressed;
 
-    public bool buttonActive;
+    public bool buttonShootActive;
 
+    
+
+    public PlayerInteractionManager playerInteraction{
+        get{
+            if(m_playerinteraction == null)
+                m_playerinteraction = GetComponent<PlayerInteractionManager>();
+            return m_playerinteraction;
+        }
+
+    }    public PlayerInteractionManager m_playerinteraction;
     private void Update() {
         UpdateInputs();
     }    
@@ -15,19 +26,19 @@ public class PlayerInputs : MonoBehaviour
     public void UpdateInputs(){
 
         
-        buttonPressed = Input.GetMouseButton(0);
+        buttonShootPressed = Input.GetButton("Fire1");
 
-        if(buttonPressed && !buttonActive){
-            buttonActive = true;
+        if(buttonShootPressed && !buttonShootActive){
+            buttonShootActive = true;
 
 
             Debug.Log("Botão Pressionado");
-            SendMessageToSpawnObject();
+            //SendMessageToSpawnObject();
 
         }
 
-        if(!buttonPressed && buttonActive){
-            buttonActive = false;
+        if(!buttonShootPressed && buttonShootActive){
+            buttonShootActive = false;
 
              Debug.Log("Botão Solto");
             
@@ -39,7 +50,7 @@ public class PlayerInputs : MonoBehaviour
 
     }
 
-public void SendMessageToSpawnObject(){
-    transform.SendMessage("SpawnObject");
-}
+   public void SendMessageToInteractWithObject(){
+
+   }
 }

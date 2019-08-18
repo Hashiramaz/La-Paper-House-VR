@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Dandelion : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public GameObject flowerPrefab;
+
+    public ParticleSystem flowerParticles;
+    private void OnTriggerEnter(Collider other) {
+        if(other.gameObject.CompareTag("Wind")){
+        SpawnFlowers();
+            Debug.Log("Theres WIIIIIND");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+
+    public void SpawnFlowers(){
+        flowerParticles.Play();
+
     }
 }
