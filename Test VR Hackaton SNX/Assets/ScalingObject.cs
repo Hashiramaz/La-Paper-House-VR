@@ -51,10 +51,10 @@ public class ScalingObject : MonoBehaviour
 
     public void ScaleScenaryUp() {
         Debug.Log("SetToMinScale");
-        iTween.ScaleTo(gameObject,ScaleUp,3);
+        iTween.ScaleTo(gameObject,ScaleUp,10);
     }
 
     public void ScaleNormal(){
-        iTween.ScaleTo(gameObject, scaleDefault ,3);
+        iTween.ScaleTo(gameObject, scaleDefault ,10);
     }
 }

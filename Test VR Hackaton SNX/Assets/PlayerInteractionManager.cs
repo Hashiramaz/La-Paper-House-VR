@@ -33,7 +33,7 @@ public class PlayerInteractionManager : MonoBehaviour
     }
 
 public void UpdateRespiration(){
-   // scalingManager.buttonScale = playerInputs.virandola.virandola > 0;
+    //scalingManager.buttonScale = playerInputs.virandola.virandola > 0;
    // scalingManager.buttonScale = Input.GetButton("Fire1");
 }
 

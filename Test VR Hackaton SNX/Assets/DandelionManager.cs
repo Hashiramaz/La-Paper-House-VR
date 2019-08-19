@@ -82,7 +82,7 @@ public class DandelionManager : MonoBehaviour
    }
 
    private void OnTriggerEnter(Collider other) {
-       Debug.Log("Está Chegando Vento");
+//       Debug.Log("Está Chegando Vento");
        if(other.CompareTag("Wind")){
            TryRemovePetale();
             TryRemovePetale();

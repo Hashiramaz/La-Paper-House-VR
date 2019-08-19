@@ -37,9 +37,12 @@ public class PlayerInputs : MonoBehaviour
     
     public void UpdateInputs(){
 
-        buttonShootPressed = (virandola.virandola > 0 );         
+       //#if UNITY_EDITOR
        //buttonShootPressed = Input.GetButton("Fire1");
 
+       //#else
+        buttonShootPressed = (virandola.virandola > 0 );         
+        //#endif
         if(buttonShootPressed && !buttonShootActive){
             buttonShootActive = true;
 
@@ -47,13 +50,15 @@ public class PlayerInputs : MonoBehaviour
             Debug.Log("Botão Pressionado");
             //SendMessageToSpawnObject();
 
+            FindObjectOfType<AudioManager>().StartHigherVolume("WindMusic");
+
         }
 
         if(!buttonShootPressed && buttonShootActive){
             buttonShootActive = false;
 
              Debug.Log("Botão Solto");
-            
+            FindObjectOfType<AudioManager>().StartLowerVolume("WindMusic");
 
         }
 

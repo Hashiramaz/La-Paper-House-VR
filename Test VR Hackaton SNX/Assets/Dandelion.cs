@@ -10,7 +10,7 @@ public class Dandelion : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Wind")){
         SpawnFlowers();
-            Debug.Log("Theres WIIIIIND");
+//            Debug.Log("Theres WIIIIIND");
         }
     }
 
